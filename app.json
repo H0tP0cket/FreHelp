@@ -16,15 +16,25 @@
     ],
     "ios": {
       "supportsTablet": true
+     
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.FreHelpapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-auth0",
+        {
+          "domain": "dev-1jd6ozoz5xqp62d8.us.auth0.com"
+        }
+      ]
+    ]
   }
 }
