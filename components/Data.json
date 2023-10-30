@@ -1,0 +1,63 @@
+[
+    {
+      
+      "id": 1,
+      "name": "TCV Food Bank",
+      "logo": "./assets/logos/TCV.png",
+      "mission": "Provide Food to Bay area",
+      "weblink": "x",
+      "contact": "",
+      "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+      
+    },
+    {
+      
+        "id": 2,
+        "name": "FremontFamily",
+        "logo": "/assets/logos/familyshelter.png",
+        "mission": "xyz",
+        "weblink": "x",
+        "contact": "",
+        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+    },
+      {
+      
+        "id": 3,
+        "name": "Abode",
+        "logo": "./assets/logos/x.png",
+        "mission": "xyz",
+        "weblink": "x",
+        "contact": "",
+        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+      },
+      {
+      
+        "id": 4,
+        "name": "Centerville",
+        "logo": "/assets/logos/x.png",
+        "mission": "xyz",
+        "weblink": "x",
+        "contact": "",
+        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+      },
+      {
+      
+        "id": 5,
+        "name": "Viola",
+        "logo": "/assets/logos/x.png",
+        "mission": "xyz",
+        "weblink": "x",
+        "contact": "",
+        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+      },
+      {
+      
+        "id": 6,
+        "name": "Placeholder",
+        "logo": "/assets/logos/x.png",
+        "mission": "xyz",
+        "weblink": "x",
+        "contact": "",
+        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+      }
+]

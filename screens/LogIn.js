@@ -18,7 +18,7 @@ function LogIn() {
     });
   }, []);
   return (
-    <View className="flex-1 w-full h-screen bg-white">
+    <View className="flex-1 w-full h-screen bg-white-back">
       <TouchableWithoutFeedback
         onPress={() => {
           Keyboard.dismiss();

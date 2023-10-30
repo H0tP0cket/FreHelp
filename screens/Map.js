@@ -8,11 +8,7 @@ import Custombutton from "../components/Custombutton";
 import CustomMapStyle from "../components/CustomMapStyle.json";
 
 function Map() {
-  const [selectedMarkerA, setSelectedMarkerA] = useState(null);
-  const [selectedMarkerB, setSelectedMarkerB] = useState(null);
-  const [selectedMarkerC, setSelectedMarkerC] = useState(null);
-  const [selectedMarkerD, setSelectedMarkerD] = useState(null);
-  const [selectedMarkerE, setSelectedMarkerE] = useState(null);
+  const [selectedMarker, setSelectedMarker] = useState(null);
 
   const nav = useNavigation();
 
@@ -33,14 +29,14 @@ function Map() {
           <View className="absolute ">
             <View className="flex-row">
               <Custombutton
-                className="  text-xl text-center px-4 py-2 z-10 mt-10 ml-10 bg-white rounded-xl"
+                className="text-xl text-center px-4 py-2 z-10 mt-10 ml-10 h-[45] bg-white rounded-xl"
                 title="<"
-                textstyles={"text-xl text-center"}
+                textstyles="text-xl text-center"
                 onPress={() => nav.navigate("Home")}
               >
                 Back
               </Custombutton>
-              <Text className="  text-xl text-center px-4 py-2 z-10 mt-10 ml-20 bg-white rounded-xl">
+              <Text className="text-xl text-center px-4 py-2 z-10 mt-10 ml-20 bg-white rounded-xl">
                 Fremont Shelters
               </Text>
             </View>
@@ -51,76 +47,72 @@ function Map() {
             initialRegion={{
               latitude: 37.5485,
               longitude: -121.9886,
-              latitudeDelta: 0.0922,
-              longitudeDelta: 0.0421,
+              latitudeDelta: 0.2322,
+              longitudeDelta: 0.0921,
             }}
             followsUserLocation={true}
             customMapStyle={CustomMapStyle}
           >
             <CustomMarker
               coordinate={{ latitude: 37.555931, longitude: -122.00766 }}
-              onPress={() => setSelectedMarkerA("TCV Food Bank")}
+              onPress={() => setSelectedMarker("A")}
             />
             <CustomMarker
               coordinate={{ latitude: 37.55078, longitude: -121.98309 }}
-              onPress={() =>
-                setSelectedMarkerB("Fremont Family Resource Center")
-              }
+              onPress={() => setSelectedMarker("B")}
             />
             <CustomMarker
               coordinate={{ latitude: 37.49474, longitude: -121.9284 }}
-              onPress={() =>
-                setSelectedMarkerC("Abode Services Sunrise Village")
-              }
+              onPress={() => setSelectedMarker("C")}
             />
             <CustomMarker
               coordinate={{ latitude: 37.55227, longitude: -122.00666 }}
-              onPress={() => setSelectedMarkerD("Centerville Free Dining Room")}
+              onPress={() => setSelectedMarker("D")}
             />
             <CustomMarker
-              coordinate={{ latitude: 37.555931, longitude: -122.00766 }}
-              onPress={() => setSelectedMarkerE("TCV Food Bank")}
+              coordinate={{ latitude: 37.52483, longitude: -122.03899 }}
+              onPress={() => setSelectedMarker("E")}
             />
           </MapView>
 
-          {selectedMarkerA && (
+          {selectedMarker === "A" && (
             <CustomWidget
-              shelter={selectedMarkerA}
+              shelter="TCV Food Bank"
               description="Food Bank and Aid Shelter"
-              link="Shelter"
-              onClose={() => setSelectedMarkerA(null)}
+              link="TCV Food Bank"
+              onClose={() => setSelectedMarker(null)}
             />
           )}
-          {selectedMarkerB && (
+          {selectedMarker === "B" && (
             <CustomWidget
-              shelter={selectedMarkerB}
+              shelter="Fremont Family Resource Center"
               description="Shelter for the Homeless"
-              link="Shelter"
-              onClose={() => setSelectedMarkerB(null)}
+              link="FremontFamily"
+              onClose={() => setSelectedMarker(null)}
             />
           )}
-          {selectedMarkerC && (
+          {selectedMarker === "C" && (
             <CustomWidget
-              shelter={selectedMarkerC}
-              description="Food Bank and Aid Shelter"
-              link="Shelter"
-              onClose={() => setSelectedMarkerC(null)}
+              shelter="Abode Services Sunrise Village"
+              description="All around services for those in need"
+              link="Abode"
+              onClose={() => setSelectedMarker(null)}
             />
           )}
-          {selectedMarkerD && (
+          {selectedMarker === "D" && (
             <CustomWidget
-              shelter={selectedMarkerD}
+              shelter="Centerville Free Dining Room"
               description="Food Bank and Aid Shelter"
-              link="Shelter"
-              onClose={() => setSelectedMarkerD(null)}
+              link="Centerville"
+              onClose={() => setSelectedMarker(null)}
             />
           )}
-          {selectedMarkerE && (
+          {selectedMarker === "E" && (
             <CustomWidget
-              shelter={selectedMarkerE}
+              shelter="Viola Blythe Community Services Center"
               description="Food Bank and Aid Shelter"
-              link="Shelter"
-              onClose={() => setSelectedMarkerE(null)}
+              link="Viola"
+              onClose={() => setSelectedMarker(null)}
             />
           )}
         </View>
