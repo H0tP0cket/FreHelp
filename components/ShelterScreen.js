@@ -29,7 +29,7 @@ const ShelterScreen = ({ route }) => {
         </View>
       </View>
 
-      <View className="flex flex-col gap-4 items-center mt-10 bg-white h-[305px] w-96 ">
+      <View className="flex flex-col gap-4 items-center mt-10 bg-white h-[240px] w-96 ">
         <Custombutton
           className="w-[343px] h-[50px]  text-black text-lg    p-3"
           title="Donate"
@@ -38,7 +38,6 @@ const ShelterScreen = ({ route }) => {
           textstyles={"text-xl font-bold"}
           onPress={() => Linking.openURL(donatelink)}
         ></Custombutton>
-
         <Custombutton
           className="w-[343px] h-[50px]  text-black text-lg    p-3"
           title="View Provided Services"

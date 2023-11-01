@@ -1,5 +1,11 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, Keyboard } from "react-native";
+import React, { useState, useLayoutEffect } from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  Keyboard,
+  TouchableWithoutFeedback,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Custombutton from "../components/Custombutton";
 
