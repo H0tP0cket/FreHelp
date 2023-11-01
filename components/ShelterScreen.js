@@ -63,7 +63,7 @@ const ShelterScreen = ({ route }) => {
           subtitle="More Official Info "
           subtitlestyles={"text-text-grey pl-2 pt-1"}
           textstyles={"text-xl font-bold"}
-          onPress={() => nav.navigate(weblink)}
+          onPress={() => Linking.openURL(weblink)}
         ></Custombutton>
         <Custombutton
           className="w-[343px] h-[50px]  text-black text-lg    p-3"
@@ -71,7 +71,7 @@ const ShelterScreen = ({ route }) => {
           subtitle="Reach out!"
           subtitlestyles={"text-text-grey pl-2 pt-1"}
           textstyles={"text-xl font-bold"}
-          onPress={() => nav.navigate(contact)}
+          onPress={() => Linking.openURL(contact)}
         ></Custombutton>
       </View>
     </View>

@@ -16,7 +16,6 @@
     ],
     "ios": {
       "supportsTablet": true
-     
     },
     "android": {
       "adaptiveIcon": {
@@ -28,13 +27,11 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      [
-        "react-native-auth0",
-        {
-          "domain": "dev-1jd6ozoz5xqp62d8.us.auth0.com"
-        }
-      ]
-    ]
+    
+    "extra": {
+      "eas": {
+        "projectId": "b6af35ef-dfe2-49de-a68a-d95bc4bcc04e"
+      }
+    }
   }
 }
