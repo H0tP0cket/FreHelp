@@ -1,22 +1,37 @@
-import {
-  View,
-  Text,
-  TouchableWithoutFeedback,
-  TextInput,
-  Keyboard,
-} from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useState } from "react";
+import { View, Text, TextInput, Keyboard } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Custombutton from "../components/Custombutton";
 
 function LogIn() {
   const nav = useNavigation();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   useLayoutEffect(() => {
     nav.setOptions({
       headerShown: false,
     });
   }, []);
+
+  const handleLogin = () => {
+    const users = {
+      "volunteer@tcvfoodbank.org": "TCVFoodBank",
+      "sidsrinivasan6@gmail.com": "Placeholder",
+      "info@abode.org": "Abode",
+      "frc@fremont.gov": "FremontFamily",
+      "sfritz@cpcfremont.org": "Centerville",
+      "violablythectr@gmail.com": "Viola",
+      "bekfastjohn@gmail.com": "johniscool",
+    };
+
+    if (users[email] === password) {
+      nav.navigate(password);
+    } else {
+      alert("Incorrect Login Details");
+    }
+  };
+
   return (
     <View className="flex-1 w-full h-screen bg-white-back">
       <TouchableWithoutFeedback
@@ -32,30 +47,21 @@ function LogIn() {
             <TextInput
               className="w-[343px] h-[50px] bg-login-grey text-text-grey-2 border-2 border-border-grey rounded-lg p-3"
               placeholder="Email"
-            ></TextInput>
+              onChangeText={setEmail}
+            />
             <TextInput
               className="w-[343px] h-[50px]  bg-login-grey text-text-grey-2 border-2 border-border-grey rounded-lg p-3"
               placeholder="Password"
-            ></TextInput>
+              onChangeText={setPassword}
+              secureTextEntry
+            />
           </View>
           <View className="items-center">
             <Custombutton
               className="bg-primary-green hover:bg-light-grey font-bold py-3 w-80  rounded-full mt-8"
-              onPress={() => nav.navigate("LogIn")}
+              onPress={handleLogin}
               title="Log In"
-              textstyles={"text-white font-bold text-xl text-center"}
-            ></Custombutton>
-            <Text className="text-lg text-primary-green text-center mt-6 font-bold">
-              Forgot Your Password ?
-            </Text>
-            <Text className="text-lg text-primary-green text-center mt-36 font-bold">
-              Don't have an Account ?
-            </Text>
-            <Custombutton
-              className="bg-primary-green hover:bg-light-grey font-bold py-3 w-80  rounded-full mt-2 "
-              onPress={() => nav.navigate("SignUp")}
-              title="Sign Up"
-              textstyles={"text-white font-bold text-xl text-center"}
+              textstyles="text-white font-bold text-xl text-center"
             ></Custombutton>
           </View>
         </View>
@@ -63,4 +69,5 @@ function LogIn() {
     </View>
   );
 }
+
 export default LogIn;

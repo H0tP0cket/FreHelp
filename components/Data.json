@@ -3,52 +3,58 @@
       
       "id": 1,
       "name": "TCV Food Bank",
-      "logo": "./assets/logos/TCV.png",
+      
       "mission": "Provide Food to Bay area",
-      "weblink": "x",
-      "contact": "",
-      "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+      "weblink": "https://www.tri-cityvolunteers.org/",
+      "contact": "https://www.tri-cityvolunteers.org/contact/",
+      "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign",
+      "providelink": "https://www.tri-cityvolunteers.org/food/"
       
     },
     {
       
         "id": 2,
         "name": "FremontFamily",
-        "logo": "/assets/logos/familyshelter.png",
-        "mission": "xyz",
-        "weblink": "x",
-        "contact": "",
-        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+        
+        "mission": "working to build a vibrant Tri-City community with strong, healthy individuals",
+        "weblink": "https://www.fremont.gov/government/departments/human-services/fremont-family-resource-center",
+        "contact": "https://www.fremont.gov/government/departments/human-services/fremont-family-resource-center/frc-agencies#!/",
+        "donatelink": "https://www.fremont.gov/government/departments/human-services/donate",
+        "providelink": "https://www.fremont.gov/government/departments/human-services/family-services"
+        
     },
       {
       
         "id": 3,
         "name": "Abode",
-        "logo": "./assets/logos/x.png",
-        "mission": "xyz",
-        "weblink": "x",
-        "contact": "",
-        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+ 
+        "mission": "Respond to the region’s housing and homelessness crisis",
+        "weblink": "https://abode.org/",
+        "contact": "https://abode.org/contact-us",
+        "donatelink": "https://abode.org/donate",
+        "providelink": "https://abode.org/services"
       },
       {
       
         "id": 4,
         "name": "Centerville",
-        "logo": "/assets/logos/x.png",
-        "mission": "xyz",
-        "weblink": "x",
-        "contact": "",
-        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+       
+        "mission": "Religious organization providing food resources for the community. ",
+        "weblink": "https://www.icarol.info/ResourceView2.aspx?org=2376&agencynum=38903534",
+        "contact": "https://www.icarol.info/ResourceView2.aspx?org=2376&agencynum=38903534",
+        "donatelink": "https://www.icarol.info/ResourceView2.aspx?org=2376&agencynum=38903534",
+        "providelink": "https://www.icarol.info/ResourceView2.aspx?org=2376&agencynum=38903534"
       },
       {
       
         "id": 5,
         "name": "Viola",
-        "logo": "/assets/logos/x.png",
-        "mission": "xyz",
-        "weblink": "x",
-        "contact": "",
-        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+     
+        "mission": "To promote, support and advocate social and human services",
+        "weblink": "https://www.violablythe.org/",
+        "contact": "https://www.violablythe.org/contact",
+        "donatelink": "https://www.paypal.com/paypalme/violablythectr",
+        "providelink": "https://www.violablythe.org/programs"
       },
       {
       
@@ -58,6 +64,7 @@
         "mission": "xyz",
         "weblink": "x",
         "contact": "",
-        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign"
+        "donatelink": "https://tri-city-volunteers-inc.networkforgood.com/projects/84219-homepage-campaign",
+        "providelink": "https://www.tri-cityvolunteers.org/food/"
       }
 ]

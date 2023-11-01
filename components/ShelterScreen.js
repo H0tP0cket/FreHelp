@@ -3,8 +3,16 @@ import { View, Text, Image, Linking } from "react-native";
 import Custombutton from "./Custombutton";
 import { useNavigation } from "@react-navigation/native";
 const ShelterScreen = ({ route }) => {
-  const { name, logo, mission, donatelink, weblink, contact, services } =
-    route.params;
+  const {
+    name,
+    logo,
+    mission,
+    donatelink,
+    weblink,
+    contact,
+
+    providelink,
+  } = route.params;
   const nav = useNavigation();
 
   useLayoutEffect(() => {
@@ -14,9 +22,7 @@ const ShelterScreen = ({ route }) => {
   }, []);
   return (
     <View className="flex-1 bg-white-back items-center mt-10 ">
-      <View className="grid grid-cols-2 bg-primary-green w-96 rounded-lg ">
-        <Image source={logo}></Image>
-
+      <View className=" bg-primary-green w-96 rounded-lg ">
         <View className="block mb-6 ml-10 ">
           <Text className="text-white font-bold text-2xl mt-6">{name}</Text>
           <Text className="text-black text-xl ">{mission}</Text>
@@ -24,14 +30,6 @@ const ShelterScreen = ({ route }) => {
       </View>
 
       <View className="flex flex-col gap-4 items-center mt-10 bg-white h-[305px] w-96 ">
-        <Custombutton
-          className="w-[343px] h-[50px]  text-black text-lg    p-3"
-          title="View Needed Resources"
-          subtitle="Look at what we need "
-          subtitlestyles={"text-text-grey pl-2 pt-1"}
-          textstyles={"text-xl font-bold"}
-          onPress={() => nav.navigate("Home")}
-        ></Custombutton>
         <Custombutton
           className="w-[343px] h-[50px]  text-black text-lg    p-3"
           title="Donate"
@@ -47,7 +45,7 @@ const ShelterScreen = ({ route }) => {
           subtitle="See what services we provide "
           subtitlestyles={"text-text-grey pl-2 pt-1"}
           textstyles={"text-xl font-bold"}
-          onPress={() => Linking.openURL(donatelink)}
+          onPress={() => Linking.openURL(providelink)}
         ></Custombutton>
         <Custombutton
           className="w-[343px] h-[50px]  text-black text-lg    p-3"
@@ -66,6 +64,7 @@ const ShelterScreen = ({ route }) => {
           subtitle="More Official Info "
           subtitlestyles={"text-text-grey pl-2 pt-1"}
           textstyles={"text-xl font-bold"}
+          onPress={() => nav.navigate(weblink)}
         ></Custombutton>
         <Custombutton
           className="w-[343px] h-[50px]  text-black text-lg    p-3"
@@ -73,6 +72,7 @@ const ShelterScreen = ({ route }) => {
           subtitle="Reach out!"
           subtitlestyles={"text-text-grey pl-2 pt-1"}
           textstyles={"text-xl font-bold"}
+          onPress={() => nav.navigate(contact)}
         ></Custombutton>
       </View>
     </View>
